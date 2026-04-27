@@ -62,7 +62,7 @@
     --card-border: rgba(175,66,197, 0.2);
     --border-light: 1px solid rgb(36, 35, 35);
     --nav-bg: transparent;
-    --header-bg: url('./images/header-dark.jpg');
+    --header-bg: ('');
     --header-overlay: rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6);
 }
 
@@ -419,7 +419,8 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(var(--header-overlay)), var(--header-bg);
+    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
+        url('./images/header-dark.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
