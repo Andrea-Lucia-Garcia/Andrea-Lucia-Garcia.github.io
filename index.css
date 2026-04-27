@@ -52,8 +52,39 @@
     --gutter-small: 2rem;
 
     --border-light: 1px solid rgb(36, 35, 35);
+    
+    //Temas//
+    
+    [data-theme="dark"] {
+  --bg-color: #000;
+  --text-color: #e5e5e6da;
+  --text-heading: #f0e9f2;
+  --card-bg: #111;
+  --card-border: rgba(255, 50, 88, 0.2);
+  --nav-bg: transparent;
+  --toggle-icon: "☀️";
 }
-
+    
+[data-theme="light"] {
+  --bg-color: #f5f5f5;
+  --text-color: #333333;
+  --text-heading: #111111;
+  --card-bg: #ffffff;
+  --card-border: rgba(255, 50, 88, 0.3);
+  --nav-bg: rgba(245, 245, 245, 0.95);
+  --toggle-icon: "🌙";
+}
+    
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+h1, h2, h3 {
+  color: var(--text-heading);
+}
+    
+}
 html {
     font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
     box-sizing: border-box;
@@ -399,6 +430,23 @@ body:not(.user-is-tabbing) a:focus {
     background: var(--pink);
 }
 
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--pink);
+  border-radius: 50px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  background: var(--pink);
+  transform: scale(1.1);
+}
+
 /* --------------------------------------- */
 /* ----- Header ----- */
 /* --------------------------------------- */
@@ -574,6 +622,214 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* ----- Footer ----- */
 /* --------------------------------------- */
+
+.certs__intro {
+  margin-bottom: var(--gutter-medium);
+  max-width: var(--container-normal-width);
+}
+
+.certs__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gutter-normal);
+}
+
+@media(max-width: 900px) {
+  .certs__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 500px) {
+  .certs__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cert__card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: var(--gutter-normal);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.cert__card:hover {
+  transform: translateY(-4px);
+  border-color: var(--pink);
+}
+
+.cert__icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cert__card h3 {
+  font-size: var(--font-size-normal);
+  margin-bottom: 0.8rem;
+}
+
+.cert__card p {
+  font-size: var(--font-size-small);
+  margin: 0.5rem 0;
+  opacity: 0.85;
+}
+
+.cert__date {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--pink);
+  margin: 0.8rem 0;
+}
+
+.cert__link {
+  font-size: 1.4rem;
+  color: var(--pink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.cert__link:hover {
+  border-bottom-color: var(--pink);
+}
+
+/* =============================================
+   HABILIDADES TÉCNICAS
+   ============================================= */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gutter-normal);
+}
+
+@media(max-width: 900px) {
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 500px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill__category {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: var(--gutter-normal);
+  transition: border-color 0.2s ease;
+}
+
+.skill__category:hover {
+  border-color: var(--pink);
+}
+
+.skill__category h3 {
+  font-size: var(--font-size-normal);
+  margin-bottom: var(--gutter-small);
+}
+
+.skill__category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill__category ul li {
+  padding: 0.4rem 0;
+  font-size: var(--font-size-small);
+  border-bottom: 1px solid rgba(255, 50, 88, 0.1);
+}
+
+.skill__category ul li:last-child {
+  border-bottom: none;
+}
+
+/* =============================================
+   HABILIDADES BLANDAS
+   ============================================= */
+.soft-skills {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: var(--gutter-normal);
+}
+
+@media(max-width: 600px) {
+  .soft-skills {
+    grid-template-columns: 1fr;
+  }
+}
+
+.soft-skills li {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  font-size: var(--font-size-small);
+  transition: border-color 0.2s;
+}
+
+.soft-skills li:hover {
+  border-color: var(--pink);
+}
+
+/* =============================================
+   AFICIONES
+   ============================================= */
+.hobbies__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gutter-normal);
+  margin-top: var(--gutter-medium);
+}
+
+@media(max-width: 900px) {
+  .hobbies__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 500px) {
+  .hobbies__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hobby__card {
+  text-align: center;
+  padding: var(--gutter-normal);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.hobby__card:hover {
+  transform: translateY(-4px);
+  border-color: var(--pink);
+}
+
+.hobby__icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.hobby__card p {
+  font-size: var(--font-size-small);
+  margin: 0;
+  font-weight: 600;
+}
+
+.hobby__card span {
+  font-size: 1.4rem;
+  opacity: 0.7;
+}
 
 .footer {
     text-align: center;
