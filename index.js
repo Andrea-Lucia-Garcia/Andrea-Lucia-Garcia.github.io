@@ -1,65 +1,75 @@
-/* -----------------------------------------
-  Have focus outline only for keyboard users 
- ---------------------------------------- */
-
 const handleFirstTab = (e) => {
-  if(e.key === 'Tab') {
-    document.body.classList.add('user-is-tabbing')
-
-    window.removeEventListener('keydown', handleFirstTab)
-    window.addEventListener('mousedown', handleMouseDownOnce)
+  if (e.key === 'Tab') {
+    document.body.classList.add('user-is-tabbing');
+    window.removeEventListener('keydown', handleFirstTab);
+    window.addEventListener('mousedown', handleMouseDownOnce);
   }
-
-}
-
-const handleMouseDownOnce = () => {
-  document.body.classList.remove('user-is-tabbing')
-
-  window.removeEventListener('mousedown', handleMouseDownOnce)
-  window.addEventListener('keydown', handleFirstTab)
-}
-
-window.addEventListener('keydown', handleFirstTab)
-
-const backToTopButton = document.querySelector(".back-to-top");
-let isBackToTopRendered = false;
-
-let alterStyles = (isBackToTopRendered) => {
-  backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
-  backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
-  backToTopButton.style.transform = isBackToTopRendered
-    ? "scale(1)"
-    : "scale(0)";
 };
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 700) {
-    isBackToTopRendered = true;
-    alterStyles(isBackToTopRendered);
-  } else {
-    isBackToTopRendered = false;
-    alterStyles(isBackToTopRendered);
-  }
+const handleMouseDownOnce = () => {
+  document.body.classList.remove('user-is-tabbing');
+  window.removeEventListener('mousedown', handleMouseDownOnce);
+  window.addEventListener('keydown', handleFirstTab);
+};
+
+window.addEventListener('keydown', handleFirstTab);
+
+/* -----------------------------------------
+   Botón volver arriba
+----------------------------------------- */
+
+const backToTopButton = document.querySelector('.back-to-top');
+
+const alterStyles = (isVisible) => {
+  if (!backToTopButton) return;
+
+  backToTopButton.style.visibility = isVisible ? 'visible' : 'hidden';
+  backToTopButton.style.opacity = isVisible ? '1' : '0';
+  backToTopButton.style.transform = isVisible ? 'scale(1)' : 'scale(0)';
+};
+
+window.addEventListener('scroll', () => {
+  const showButton = window.scrollY > 700;
+  alterStyles(showButton);
 });
 
-// =============================================
-// MODO CLARO / OSCURO
-// =============================================
+/* -----------------------------------------
+   Modo claro / oscuro
+----------------------------------------- */
 
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
-// Recuperar preferencia guardada o usar oscuro por defecto
-const savedTheme = localStorage.getItem('theme') || 'dark';
-html.setAttribute('data-theme', savedTheme);
-themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+let currentTheme = 'dark';
 
-// Cambiar tema al hacer clic
-themeToggle.addEventListener('click', () => {
-  const current = html.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
+try {
+  currentTheme = localStorage.getItem('theme') || 'dark';
+} catch (error) {
+  currentTheme = 'dark';
+}
 
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-  themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
-});
+html.setAttribute('data-theme', currentTheme);
+
+if (themeToggle) {
+  themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+  themeToggle.setAttribute(
+    'aria-label',
+    currentTheme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'
+  );
+
+  themeToggle.addEventListener('click', () => {
+    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    html.setAttribute('data-theme', currentTheme);
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    themeToggle.setAttribute(
+      'aria-label',
+      currentTheme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'
+    );
+
+    try {
+      localStorage.setItem('theme', currentTheme);
+    } catch (error) {
+    }
+  });
+}
