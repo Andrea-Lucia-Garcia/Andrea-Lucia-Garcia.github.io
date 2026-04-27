@@ -1,276 +1,261 @@
-<!-- 
-  Hello 😊.
-
-  This template is designed and developed by Nisar Hassan Naqvi
-  for anyone to use for free or customize the way they like.
-
-  Github Repo: https://github.com/nisarhassan12/portfolio-template/
-  My Website: https://nisar.dev
-
-  For business & inquires, contact me => syednisarhassan12@gmail.com
--->
-
-<!--
-  Follow the instructions written in comments to create your stunning portfolio
--->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-
-  <!-- Put your site title here -->
-  <title>
-    Syed Ali Hussnain | A Web Developer based in Lahore, Pakistan.
-  </title>
-
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
-  <link rel="stylesheet" href="index.css" />
+  /png" href="./images/favicon.png" />
+  <title>Andrea García | Técnica ASIR · Ciberseguridad · Redes · Granada</title>
+  <meta name="description" content="Portfolio de Andrea Lucía García Ronquillo, futura técnica en ASIR especializada en ciberseguridad, redes y cloud. Certificada por Cisco y Microsoft." />
+  <meta name="keywords" content="ASIR, Ciberseguridad, Redes, Cloud, Cisco, Microsoft, Granada, FCT, Portfolio" />
+  " />
 </head>
 
 <body>
 
-  <!-- ***** Header ***** -->
-
+  <!-- ===== HEADER / NAVEGACIÓN ===== -->
   <header class="header" role="banner" id="top">
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
+          ><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          ><a href="#certificaciones" class="nav__link">Certificaciones</a></li>
+          ><a href="#habilidades" class="nav__link">Habilidades</a></li>
+          ><a href="#proyectos" class="nav__link">Proyectos</a></li>
+          ><a href="#aficiones" class="nav__link">Aficiones</a></li>
+          ><a href="#contacto" class="nav__link">Contacto</a></li>
+          <!-- Botón modo claro/oscuro -->
+          >
+            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar modo claro/oscuro">
+              🌙
+            </button>
           </li>
         </ul>
       </nav>
     </div>
+
     <div class="header__text-box row">
       <div class="header__text">
         <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Syed Ali Hussnain</span>
+          <span>Andrea Lucía García Ronquillo</span>
         </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>A Web Developer based in Lahore, Pakistan.</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
+        <p>Futura Técnica en ASIR · Ciberseguridad · Redes · Cloud · Granada</p>
+        <a href="#contacto" class="btn btn--pink">Contactar</a>
       </div>
     </div>
   </header>
 
   <main role="main">
 
-    <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
+    <!-- ===== SOBRE MÍ ===== -->
+    <section class="about" id="sobre-mi">
       <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Portfolio Template</h3>
-              <p>
-                A free Open Source Portfolio for anyone to use for free.
-              </p>
-              <ul class="work__list">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Parcel</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Calculator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Notificator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ***** Clients ***** -->
-
-    <section class="client" id="clients">
-      <div class="row">
-        <h2>Clients</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
-        </div>
-      </div>
-    </section>
-
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
+        <h2>Sobre mí</h2>
         <div class="about__content">
           <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
-              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
-              in vel, ex quam quidem quos mollitia labore aut sunt eius
-              ratione molestiae fuga veniam facere similique voluptate.
+              Soy futura Técnica en Administración de Sistemas Informáticos en Red (ASIR) con certificaciones
+              oficiales de <strong>Cisco</strong> (CCST Networking, CCST Cybersecurity) y <strong>Microsoft</strong>
+              (SC-900 Security, Compliance and Identity Fundamentals), orientada a roles de ciberseguridad,
+              infraestructura de redes y entornos cloud.
             </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
+            <p>
+              Además de mi formación técnica, aporto experiencia en <strong>desarrollo web</strong>, gestión de
+              comunidades digitales y atención al cliente, lo que me permite conectar el lado técnico con el
+              funcional, algo especialmente valorado en equipos de consultoría y soporte IT.
+            </p>
+            <p>
+              Actualmente busco empresa para realizar la <strong>Formación en Centros de Trabajo (FCT)</strong>
+              en Granada o en modalidad remota/híbrida, con especial interés en ciberseguridad, redes
+              corporativas o administración de sistemas cloud.
+            </p>
+
+            <!-- Habilidades blandas -->
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Habilidades blandas</h3>
+            <ul class="soft-skills">
+              >🗣️ <strong>Comunicación clara</strong> — Experiencia directa en atención al cliente y soporte</li>
+              >🤝 <strong>Trabajo en equipo</strong> — Proyectos colaborativos en entornos multidisciplinares</li>
+              >🔍 <strong>Resolución de problemas</strong> — Mentalidad analítica aplicada a entornos técnicos</li>
+              >📚 <strong>Aprendizaje continuo</strong> — 6 certificaciones en menos de un año</li>
+              >🌐 <strong>Comunicación bilingüe</strong> — Perfil profesional en español e inglés</li>
+              >⏱️ <strong>Gestión del tiempo</strong> — Compagino formación técnica con proyectos propios</li>
+            </ul>
+
+            <a href="#" class="btn" target="_blank">Ver CV</a>
           </div>
 
           <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
+            <!-- Sustituye foto-perfil.jpg por el nombre de tu imagen -->
+            <img class="about__photo" src="./images/foto-perfil.jpg" alt="Andrea Lucía García Ronquillo" />
           </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <!-- ***** Contact ***** -->
+    <!-- ===== CERTIFICACIONES ===== -->
+    <section class="certs" id="certificaciones">
+      <div class="row">
+        <h2>Certificaciones</h2>
+        <p class="certs__intro">Certificaciones oficiales verificadas por Cisco, Microsoft y Certiport/Pearson VUE.</p>
+        <div class="certs__grid">
 
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
-        </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
+          <div class="cert__card">
+            <div class="cert__icon">🛡️</div>
+            <h3>Microsoft SC-900</h3>
+            <p>Security, Compliance and Identity Fundamentals</p>
+            <span class="cert__date">Junio 2025 · Microsoft</span>
+            <a href="https://www.credly.com/users/andrea-lucia-garcia-ronquillo" target="_blank" class="cert__link">Ver credencial →</a>
+          </div>
+
+          <div class="cert__card">
+            <div class="cert__icon">🌐</div>
+            <h3>CCST Networking</h3>
+            <p>Cisco Certified Support Technician Networking</p>
+            <span class="cert__date">Marzo 2025 · Cisco</span>
+            <a href="https://www.credly.com/users/andrea-lucia-garcia-ronquillo" target="_blank" class="cert__link">Ver credencial →</a>
+          </div>
+
+          <div class="cert__card">
+            <div class="cert__icon">🔒</div>
+            <h3>CCST Cybersecurity</h3>
+            <p>Cisco Certified Support Technician Cybersecurity</p>
+            <span class="cert__date">Octubre 2024 · Cisco</span>
+            <a href="https://www.credly.com/users/andrea-lucia-garcia-ronquillo" target="_blank" class="cert__link">Ver credencial →</a>
+          </div>
+
+          <div class="cert__card">
+            <div class="cert__icon">🔐</div>
+            <h3>Network Security Support Technician</h3>
+            <p>Certiport / Pearson VUE</p>
+            <span class="cert__date">Marzo 2025</span>
+            <a href="https://www.credly.com/users/andrea-lucia-garcia-ronquillo" target="_blank" class="cert__link">Ver credencial →</a>
+          </div>
+
+          <div class="cert__card">
+            <div class="cert__icon">💻</div>
+            <h3>IT Specialist – Cybersecurity</h3>
+            <p>Certiport / Pearson VUE</p>
+            <span class="cert__date">Septiembre 2024</span>
+            <a href="https://www.credly.com/users/andrea-lucia-garcia-ronquillo" target="_blank" class="cert__link">Ver credencial →</a>
+          </div>
+
+          <div class="cert__card">
+            <div class="cert__icon">🎓</div>
+            <h3>Introduction to Cybersecurity</h3>
+            <p>Cisco Networking Academy</p>
+            <span class="cert__date">Octubre 2024</span>
+            <a href="https://www.credly.com/users/andrea-lucia-garcia-ronquillo" target="_blank" class="cert__link">Ver credencial →</a>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ***** Footer ***** -->
+    <!-- ===== HABILIDADES TÉCNICAS ===== -->
+    <section class="skills" id="habilidades">
+      <div class="row">
+        <h2>Habilidades técnicas</h2>
+        <div class="skills__grid">
 
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-      </ul>
+          <div class="skill__category">
+            <h3>🔒 Ciberseguridad</h3>
+            <ul>
+              >Triada CIA · Zero Trust</li>
+              >Firewalls · IDS/IPS</li>
+              >Análisis de vulnerabilidades</li>
+              >VPN · SSL/TLS · IPSec</li>
+              >Microsoft Defender · Sentinel</li>
+            </ul>
+          </div>
 
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
+          <div class="skill__category">
+            <h3>🌐 Redes</h3>
+            <ul>
+              >Modelo OSI · TCP/IP</li>
+              >Cisco IOS · Packet Tracer</li>
+              >Subnetting · IPv4/IPv6</li>
+              >VLANs · Spanning Tree</li>
+              >DNS · DHCP · NAT</li>
+            </ul>
+          </div>
+
+          <div class="skill__category">
+            <h3>⚙️ Sistemas</h3>
+            <ul>
+              >Linux (Ubuntu, Debian)</li>
+              >Windows Server</li>
+              >VirtualBox · VMware</li>
+              >Active Directory básico</li>
+              >Microsoft Azure (SC-900)</li>
+            </ul>
+          </div>
+
+          <div class="skill__category">
+            <h3>🗄️ Bases de datos</h3>
+            <ul>
+              >SQL · MySQL Workbench</li>
+              >Diseño de BBDD relacionales</li>
+              >Consultas y procedimientos</li>
+            </ul>
+          </div>
+
+          <div class="skill__category">
+            <h3>🖥️ Desarrollo web</h3>
+            <ul>
+              >HTML · CSS · JavaScript básico</li>
+              >WordPress</li>
+              >SEO técnico básico</li>
+            </ul>
+          </div>
+
+          <div class="skill__category">
+            <h3>🛠️ Herramientas</h3>
+            <ul>
+              >GitHub · Git básico</li>
+              >Wireshark (básico)</li>
+              >Canva · Google Workspace</li>
+            </ul>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
-  <script src="./index.js"></script>
-</body>
+    <!-- ===== PROYECTOS ===== -->
+    <section class="work" id="proyectos">
+      <div class="row">
+        <h2>Proyectos y prácticas</h2>
+        <div class="work__boxes">
 
-</html>
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Portfolio web personal</h3>
+              <p>Diseño y desarrollo de este portfolio con HTML, CSS y JavaScript. Incluye modo claro/oscuro, diseño responsive y secciones de certificaciones, habilidades y proyectos.</p>
+              <ul class="work__list">
+                >HTML</li>
+                >CSS</li>
+                >JavaScript</li>
+                >GitHub Pages</li>
+              </ul>
+              <div class="work__links">
+                <a href="#top" class="link__text">Ver sitio →</a>
+                <a href="https://github.com/Andrea-Lucia-Garcia" target="_blank">GitHub</a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/proyecto-portfolio.png" class="work__image" alt="Portfolio web" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Laboratorio de redes — Cisco Packet Tracer</h3>
+              <p>Diseño y configuración de topologías de red con VLANs, enrutamiento estático y dinámico (OSPF), y protocolos de seguridad básicos en entorno simulado.</p>
+              <ul class="work__list">
+                >Cisco Packet Tracer</li>
+                >VLANs</li>
+                >OSPF</li>
+                >STP</li>
+              </ul>
+              <div class="work__links">
+                <a href="https://github.com/Andrea-Lucia-Garcia" target="_blank" class="
