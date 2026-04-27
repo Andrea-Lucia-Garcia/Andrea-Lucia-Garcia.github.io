@@ -65,7 +65,7 @@
   --card-bg: #111;
   --card-border: rgba(255, 50, 88, 0.2);
   --nav-bg: transparent;
-  --header-bg: url('imagesheader-dark/images/header.jpg');
+  --header-bg: url('./images/imagesheader-dark.jpg');
   --header-overlay: rgba(0,0,0,0.1), rgba(0,0,0,0.4);
 }
 
@@ -76,7 +76,7 @@
   --card-bg: #ffffff;
   --card-border: rgba(255, 50, 88, 0.3);
   --nav-bg: rgba(245, 245, 245, 0.95);
-  --header-bg: url('imagesheader-light.jpg');
+  --header-bg: url('./images/imagesheader-light.jpg');
   --header-overlay: rgba(255,255,255,0.1), rgba(255,255,255,0.2);
 }
 
@@ -104,13 +104,13 @@ html {
 }
 
 body {
-    font-size: var(--font-size-small);
-    font-family: var(--font-stack);
-    font-weight: 400;
-    color: var(--white-1);
-    line-height: var(--line-height-normal);
-    background: var(--black);
-    overflow-x: hidden;
+  font-size: var(--font-size-small);
+  font-family: var(--font-stack);
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: var(--line-height-normal);
+  background: var(--bg-color);
+  overflow-x: hidden;
 }
 
 .row {
@@ -156,13 +156,11 @@ img {
 /* ----- Headlines and Paragraphs ----- */
 /* --------------------------------------- */
 
-h1,
-h2,
-h3 {
-    font-family: 'Jost', sans-serif;
-    font-weight: 400;
-    line-height: var(--line-height-small);
-    color: var(--white);
+h1, h2, h3 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  line-height: var(--line-height-small);
+  color: var(--text-heading);
 }
 
 .heading-primary {
