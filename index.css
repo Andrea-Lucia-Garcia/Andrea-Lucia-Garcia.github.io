@@ -65,7 +65,7 @@
   --card-bg: #111;
   --card-border: rgba(255, 50, 88, 0.2);
   --nav-bg: transparent;
-  --header-bg: url('./images/header.jpg');
+  --header-bg: url('imagesheader-dark/images/header.jpg');
   --header-overlay: rgba(0,0,0,0.1), rgba(0,0,0,0.4);
 }
 
@@ -76,7 +76,7 @@
   --card-bg: #ffffff;
   --card-border: rgba(255, 50, 88, 0.3);
   --nav-bg: rgba(245, 245, 245, 0.95);
-  --header-bg: url('./images/header-light.jpg');
+  --header-bg: url('imagesheader-light.jpg');
   --header-overlay: rgba(255,255,255,0.1), rgba(255,255,255,0.2);
 }
 
