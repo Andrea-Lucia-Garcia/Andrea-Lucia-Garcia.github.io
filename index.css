@@ -50,22 +50,6 @@
 }
 
 /* --------------------------------------- */
-/* ----- TEMAS: Modo oscuro / claro ----- */
-/* --------------------------------------- */
-
-[data-theme="dark"] {
-    --bg-section: #030303;
-    --text-color: #e5e5e6da;
-    --text-heading: #f0e9f2;
-    --card-bg: #111111;
-    --card-border: rgba(175,66,197, 0.2);
-    --border-light: 1px solid rgb(36, 35, 35);
-    --nav-bg: transparent;
-    --header-bg: ('');
-    --header-overlay: rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6);
-}
-
-/* --------------------------------------- */
 /* ----- Base Elements ----- */
 /* --------------------------------------- */
 
